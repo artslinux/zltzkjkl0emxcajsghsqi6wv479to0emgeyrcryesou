@@ -1,0 +1,14 @@
+name: 'CG 3D'
+description: 'Free 3D Models for Download under Public Domain / CC0 License'
+author: 'Pretended Studio'
+email: 'pretendedstudio@mail.ru'
+permalink: /:title
+plugin:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-category-pages
+markdown: kramdown
+highlighter: rouge
+paginate: 15
