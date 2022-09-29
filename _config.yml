@@ -2,6 +2,7 @@ name: 'CG 3D'
 description: 'Free 3D Models for Download under Public Domain / CC0 License'
 author: 'Pretended Studio'
 email: 'pretendedstudio@mail.ru'
+baseurl: ''
 permalink: /:title
 plugin:
   - jekyll-feed
