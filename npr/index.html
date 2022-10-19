@@ -27,6 +27,73 @@ title: NPR Render
 </ul>
 <br/>
 <p>----------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+<h6>{{ page.categories }} 3d models</h6>
+
+<div class="page-row">
+{% unless page.content == '' %}
+  {{ page.content }}
+{% endunless %}
+
+{% unless site.tags[page.categories] | size > 0 %}
+  No posts found.
+{% endunless %}
+
+{% for post in site.tags[page.categories] %}
+  <div class="page-column" style="border-color: none;">
+    <div class="page-card" style="border-color: #fff;">
+    <a alt="Free 3D {{ post.title }}" title="Free 3D {{ post.title }}" style="text-decoration: none;" href="{{site.baseurl}}{{post.url}}">
+    <img alt="Free 3D {{ post.title }}" title="Free 3D {{ post.title }}" src="{{post.image}}" class="img">
+    <h3 style="font-size: 1rem; font-weight: 400; color: #333;">{{ post.title }}</h3>
+    </a>
+    </div>
+  </div>
+{% endfor %}
+</div>
+<p>----------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+<h6>{{ page.categories }}</h6>
+
+<div class="page-row">
+{% unless page.content == '' %}
+  {{ page.content }}
+{% endunless %}
+
+{% unless site.category[page.categories] | size > 0 %}
+  No posts found.
+{% endunless %}
+
+{% for post in site.category[page.categories] %}
+  <div class="page-column" style="border-color: none;">
+    <div class="page-card" style="border-color: #fff;">
+    <a alt="Free 3D {{ post.title }}" title="Free 3D {{ post.title }}" style="text-decoration: none;" href="{{site.baseurl}}{{post.url}}">
+    <img alt="Free 3D {{ post.title }}" title="Free 3D {{ post.title }}" src="{{post.image}}" class="img">
+    <h3 style="font-size: 1rem; font-weight: 400; color: #333;">{{ post.title }}</h3>
+    </a>
+    </div>
+  </div>
+{% endfor %}
+</div>
+<p>----------------------------------------------------------------------------------------------------------------------------------------------</p>
+{% for models in site.categories %}
+<div class="page-container" style="padding:0px 15px;">
+<h6>{{models[0] | capitalize}}</h6>
+</div>
+<div class="page-row">
+{% for post in models[Vehicle] %}
+  <div class="page-column" style="border-color: none;">
+    <div class="page-card" style="border-color: #fff;">
+    <meta itemprop="license" content="https://creativecommons.org/licenses/publicdomain/">
+    <a alt="Free 3D {{ post.title }}" title="Free 3D {{ post.title }}" style="text-decoration: none;" href="{{site.baseurl}}{{post.url}}">
+    <img alt="Free 3D {{ post.title }}" title="Free 3D {{ post.title }}" src="{{post.image}}" class="img">
+    <h3 style="font-size: 1rem; font-weight: 400; color: #333;">{{ post.title }}</h3>
+    </a>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% endfor %}
+<p>----------------------------------------------------------------------------------------------------------------------------------------------</p>
 <h2>Tags</h2>
 <ol>
 {% assign categories_list = site.tags %}
