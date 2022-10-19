@@ -12,6 +12,10 @@ title: NPR Render
   </div>
 <br/>
 <h5>Category</h5>
+  {% assign maxRelated = 2 %}
+  {% assign minCommonTags =  1 %}
+  {% assign maxRelatedCounter = 0 %}
+  
 {% for category in site.categories %}
 
 {% for post in site.categories.Weapon %}
