@@ -11,38 +11,12 @@ title: NPR Render
     <a href="/npr" class="bar-item button" style="background-color:deepskyblue;">NPR Render</a>
   </div>
 <br/>
-<h5>Category</h5>
-  {% assign maxRelated = 2 %}
-  {% assign minCommonTags =  1 %}
-  {% assign maxRelatedCounter = 0 %}
-  
-{% for category in site.categories %}
+<p>Posts in category "Vehicle" are:</p>
 
-{% for post in site.categories.Weapon %}
-
-<h1><a href="{{post.url}}">{{ post.title }}</a></h1>
-
-{% endfor %}
-
-{% endfor %}
-
-<br/>
-<p>----------------------------------------------------------------------------------------------------------------------------------------------------</p>
-{% for Vehicle in site.categories %}
-    <h3>{{ Vehicle | first }}</h3>
-    {% for post in page.categories.Vehicle %}
-      {{ post.title }}<br>
-    {% endfor %}            
-{% endfor %}
-<p>----------------------------------------------------------------------------------------------------------------------------------------------------</p>
-<p>Posts in category "Character" are:</p>
-
-<ul>
-  {% for post in site.categories.Character %}
+  {% for post in site.categories.Vehicle %}
     {% if post.url %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}
-</ul>
 
 </div>
