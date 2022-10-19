@@ -12,4 +12,4 @@ plugin:
   - jekyll-category-pages
 markdown: kramdown
 highlighter: rouge
-paginate: 15
+paginate: 1
