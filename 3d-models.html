@@ -12,6 +12,7 @@ title: 3D Models
 </div>
 <div class="page-row">
 {% for post in site.posts %}
+  {% if post.visible== 1  %}
   <div class="page-column" style="border-color: none;">
     <div class="page-card" style="border-color: #fff;">
       <meta itemprop="license" content="https://creativecommons.org/licenses/publicdomain/">
@@ -21,5 +22,6 @@ title: 3D Models
       </a>
     </div>
   </div>
+  {% endif %}
 {% endfor %}
 </div>
