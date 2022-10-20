@@ -3,7 +3,7 @@ title:  "Bugatti Chiron 2016"
 visible: 1
 metadate: "hide"
 categories: [ Vehicle ]
-tags: [ supercar ]
+tags: [ supercar, npr ]
 image: "/assets/images/bugatti-chiron.jpg"
 object: "Bugatti Chiron 2016 (Exterior Only)"
 geometry: "Subdivision-ready"
