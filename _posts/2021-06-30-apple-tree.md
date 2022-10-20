@@ -2,7 +2,7 @@
 title:  "Apple Tree"
 metadate: "hide"
 categories: [ Vegetation ]
-tags: [ tree, npr ]
+tags: [ tree ]
 image: "/assets/images/apple-tree.jpg"
 object: "Apple Tree"
 geometry: "Subdivision-ready"
