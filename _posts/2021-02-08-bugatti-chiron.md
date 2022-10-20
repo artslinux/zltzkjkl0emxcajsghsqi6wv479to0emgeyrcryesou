@@ -1,5 +1,6 @@
 ---
 title:  "Bugatti Chiron 2016"
+published: false
 metadate: "hide"
 categories: [ Vehicle ]
 tags: [ supercar ]
