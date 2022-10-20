@@ -1,5 +1,6 @@
 ---
 title:  "Koenigsegg Agera RS 2015"
+visible: 1
 metadate: "hide"
 categories: [ Vehicle ]
 tags: [ supercar ]
