@@ -11,9 +11,9 @@ title: NPR Render
     <a href="/npr" class="bar-item button" style="background-color:deepskyblue;">NPR Render</a>
   </div>
 </div>
-
-{% for post in site.categories.Vehicle %}
 <div class="page-row">
+{% for post in site.categories.Vehicle %}
+
   {% if post.url %}
   <div class="page-column" style="border-color: none;">
     <div class="page-card" style="border-color: #fff;">
@@ -25,5 +25,6 @@ title: NPR Render
     </div>
   </div>
   {% endif %}
-</div>
+
 {% endfor %}
+</div>
