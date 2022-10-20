@@ -1,5 +1,6 @@
 ---
 title:  "Bugatti La Voiture Noire 2019"
+visible: 2
 metadate: "hide"
 categories: [ Vehicle ]
 tags: [ supercar ]
