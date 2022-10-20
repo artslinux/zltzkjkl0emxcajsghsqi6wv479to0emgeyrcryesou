@@ -14,6 +14,7 @@ title: NPR Render
 </div>
 <div class="page-row">
 {% for post in site.categories.Vehicle %}
+  {% if post.visible== 1  %}
 
   {% if post.url %}
   <div class="page-column" style="border-color: none;">
@@ -25,6 +26,7 @@ title: NPR Render
     </a>
     </div>
   </div>
+  {% endif %}
   {% endif %}
 
 {% endfor %}
