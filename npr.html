@@ -19,7 +19,7 @@ title: NPR
     {% endfor %}
   {% else %}
     {% for models in categories_list %}
-      <li><a href="{{ models[0] | downcase }}">{{ models[0] | capitalize }} ({{ models[1].size }})</a></li>
+      <li><a href="{{ models[0] | downcase }}">{{ models[0] | downcase }} ({{ models[1].size }})</a></li>
     {% endfor %}
   {% endif %}
 {% assign categories_list = nil %}
