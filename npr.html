@@ -1,0 +1,24 @@
+---
+layout: page
+title: NPR
+---
+{% for models in site.categories %}
+<div class="page-container" style="padding:0px 15px;">
+<h6>{{models[0] | capitalize}}<a href="#{{ category }}">{{ category | capitalize }} ({{ site.tags[category].size }})</a></h6>
+</div>
+<div class="page-row">
+{% for post in models[1] %}
+  {% if post.visible== 1  %}
+  <div class="page-column" style="border-color: none;">
+    <div class="page-card" style="border-color: #fff;">
+    <meta itemprop="license" content="https://creativecommons.org/licenses/publicdomain/">
+    <a alt="Free 3D {{ post.title }}" title="Free 3D {{ post.title }}" style="text-decoration: none;" href="{{site.baseurl}}{{post.url}}">
+    <img alt="Free 3D {{ post.title }}" title="Free 3D {{ post.title }}" src="{{post.image}}" class="img">
+    <h3 style="font-size: 1rem; font-weight: 400; color: #333;">{{ post.title }}</h3>
+    </a>
+    </div>
+  </div>
+  {% endif %}
+{% endfor %}
+</div>
+{% endfor %}
