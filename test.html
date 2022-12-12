@@ -504,22 +504,18 @@ p a:hover {
 <div class="p-content">
   <div class="p-post">
 <div class="page-row">
-{% for post in site.categories.Food %}
+{% for post in site.posts %}
   {% if post.visible== 1  %}
-
-  {% if post.url %}
   <div class="page-column" style="border-color: none;">
     <div class="page-card" style="border-color: #fff;">
-    <meta itemprop="license" content="https://creativecommons.org/licenses/publicdomain/">
-    <a alt="Free 3D {{ post.title }}" title="Free 3D {{ post.title }}" style="text-decoration: none;" href="{{post.url}}">
-    <img alt="Free 3D {{ post.title }}" title="Free 3D {{ post.title }}" src="{{post.image}}" class="img">
-    <h3 style="font-size: 1rem; font-weight: 400; color: #333;">{{ post.title }}</h3>
-    </a>
+      <meta itemprop="license" content="https://creativecommons.org/licenses/publicdomain/">
+      <a alt="Free 3D {{ post.title }}" title="Free 3D {{ post.title }}" style="text-decoration: none; " href="{{site.baseurl}}{{post.url}}">
+      <img alt="Free 3D {{ post.title }}" title="Free 3D {{ post.title }}" class="img" src="{{post.image}}">
+      <h3 style="font-size: 1rem; font-weight: 400; color: #333;">{{ post.title }}</h3>
+      </a>
     </div>
   </div>
   {% endif %}
-  {% endif %}
-
 {% endfor %}
 </div>
   </div>
