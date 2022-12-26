@@ -1,0 +1,33 @@
+---
+title:  "Copperband Butterflyfish"
+visible: 1
+metadate: "hide"
+categories: [ Animal ]
+tags: [ fish ]
+image: "/assets/images/copperband-butterflyfish.jpg"
+object: "Copperband Butterflyfish"
+geometry: "Subdivision-ready"
+vertices: "4,608"
+uvunwrapped: "Yes"
+animated: "No"
+software: "Blender 2.79b"
+rigged: "No"
+scalable: "CG Only"
+engine: "Cycles Render (128 Samples)"
+gameready: "N/A"
+3dprintableready: "N/A"
+admin: "<a href='/about'>Mohamad Rido</a>"
+blend: "<a title='Object' href='' onclick='copperband_butterflyfish_blend()' >.zip 1.3 MB</a>"
+dae: "<a title='Object' href='' onclick='copperband_butterflyfish_dae()' >.zip 232.1 kB</a>"
+3ds: "<a title='Object' href='' onclick='copperband_butterflyfish_3ds()' >.zip 133.6 kB</a>"
+fbx: "<a title='Object' href='' onclick='copperband_butterflyfish_fbx()' >.zip 235.7 kB</a>"
+obj: "<a title='Object' href='' onclick='copperband_butterflyfish_obj()' >.zip 172.6 kB</a>"
+stl: "<a title='Object' href='' onclick='copperband_butterflyfish_stl()' >.zip 164.5 kB</a>"
+glb: "<a title='Object' href='' onclick='copperband_butterflyfish_glb()' >.zip 113.8 kB</a>"
+gltf: "<a title='Object' href='' onclick='copperband_butterflyfish_gltf()' >.zip 125.1 kB</a>"
+texture: "<a title='Texture' href='' onclick='copperband_butterflyfish_texture()' >.zip 7.2 MB</a>"
+hdri: "No"
+imagetexture: ".png, .svg, .xcf"
+environment: ".hdr"
+notice: "-"
+---
