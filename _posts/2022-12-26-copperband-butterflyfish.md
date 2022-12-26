@@ -29,5 +29,5 @@ texture: "<a title='Texture' href='' onclick='copperband_butterflyfish_texture()
 hdri: "No"
 imagetexture: ".png, .svg, .xcf"
 environment: ".hdr"
-notice: "-"
+notice: "Coming soon 2023"
 ---
