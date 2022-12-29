@@ -840,7 +840,7 @@ function pepsi_can_texture(){window.open('https://cdn.cg3d.org/pepsican.zip');}
 function coca_cola_texture(){window.open('https://cdn.cg3d.org/coca-cola-texture-4k.zip');}
 function red_bull_texture(){window.open('https://cdn.cg3d.org/red-bull-texture-4k.zip');}
 function copperband_butterflyfish_texture(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-texture.zip');}
-function copperband_butterflyfish_texture(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-texture-svg.zip');}
-function copperband_butterflyfish_texture(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-texture-xcf.zip');}
+function copperband_butterflyfish_svg__texture(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-texture-svg.zip');}
+function copperband_butterflyfish_xcf__texture(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-texture-xcf.zip');}
 
 function _texture(){window.open('https://cdn.cg3d.org/.zip');}
