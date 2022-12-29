@@ -348,16 +348,6 @@ function copperband_butterflyfish_dae(){window.open('https://cdn.cg3d.org/copper
 function copperband_butterflyfish_stl(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-stl.zip');}
 function copperband_butterflyfish_glb(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-glb.zip');}
 function copperband_butterflyfish_gltf(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-gltf.zip');}
-
-function _blend(){window.open('https://cdn.cg3d.org/.zip');}
-function _fbx(){window.open('https://cdn.cg3d.org/-fbx.zip');}
-function _obj(){window.open('https://cdn.cg3d.org/-obj.zip');}
-function _3ds(){window.open('https://cdn.cg3d.org/-3ds.zip');}
-function _dae(){window.open('https://cdn.cg3d.org/-dae.zip');}
-function _stl(){window.open('https://cdn.cg3d.org/-stl.zip');}
-function _glb(){window.open('https://cdn.cg3d.org/-glb.zip');}
-function _gltf(){window.open('https://cdn.cg3d.org/-gltf.zip');}
-
 function _blend(){window.open('https://cdn.cg3d.org/.zip');}
 function _fbx(){window.open('https://cdn.cg3d.org/-fbx.zip');}
 function _obj(){window.open('https://cdn.cg3d.org/-obj.zip');}
@@ -840,7 +830,4 @@ function pepsi_can_texture(){window.open('https://cdn.cg3d.org/pepsican.zip');}
 function coca_cola_texture(){window.open('https://cdn.cg3d.org/coca-cola-texture-4k.zip');}
 function red_bull_texture(){window.open('https://cdn.cg3d.org/red-bull-texture-4k.zip');}
 function copperband_butterflyfish_texture(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-texture.zip');}
-function copperband_butterflyfish_svg__texture(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-texture-svg.zip');}
-function copperband_butterflyfish_xcf__texture(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-texture-xcf.zip');}
-
 function _texture(){window.open('https://cdn.cg3d.org/.zip');}
