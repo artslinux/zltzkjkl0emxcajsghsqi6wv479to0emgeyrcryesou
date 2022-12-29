@@ -340,6 +340,14 @@ function red_bull_dae(){window.open('https://cdn.cg3d.org/red-bull-dae.zip');}
 function red_bull_stl(){window.open('https://cdn.cg3d.org/red-bull-stl.zip');}
 function red_bull_glb(){window.open('https://cdn.cg3d.org/red-bull-glb.zip');}
 function red_bull_gltf(){window.open('https://cdn.cg3d.org/red-bull-gltf.zip');}
+function copperband_butterflyfish_blend(){window.open('https://cdn.cg3d.org/copperband-butterflyfish.zip');}
+function copperband_butterflyfish_fbx(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-fbx.zip');}
+function copperband_butterflyfish_obj(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-obj.zip');}
+function copperband_butterflyfish_3ds(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-3ds.zip');}
+function copperband_butterflyfish_dae(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-dae.zip');}
+function copperband_butterflyfish_stl(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-stl.zip');}
+function copperband_butterflyfish_glb(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-glb.zip');}
+function copperband_butterflyfish_gltf(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-gltf.zip');}
 
 function _blend(){window.open('https://cdn.cg3d.org/.zip');}
 function _fbx(){window.open('https://cdn.cg3d.org/-fbx.zip');}
@@ -831,4 +839,8 @@ function apple_leaf_2d_texture(){window.open('https://cdn.cg3d.org/appleleaf2d.z
 function pepsi_can_texture(){window.open('https://cdn.cg3d.org/pepsican.zip');}
 function coca_cola_texture(){window.open('https://cdn.cg3d.org/coca-cola-texture-4k.zip');}
 function red_bull_texture(){window.open('https://cdn.cg3d.org/red-bull-texture-4k.zip');}
+function copperband_butterflyfish_texture(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-texture.zip');}
+function copperband_butterflyfish_texture(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-texture-svg.zip');}
+function copperband_butterflyfish_texture(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-texture-xcf.zip');}
+
 function _texture(){window.open('https://cdn.cg3d.org/.zip');}
