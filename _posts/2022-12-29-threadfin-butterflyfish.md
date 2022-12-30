@@ -1,0 +1,33 @@
+---
+title:  "Threadfin Butterflyfish"
+visible: 1
+metadate: "hide"
+categories: [ Animal ]
+tags: [ fish ]
+image: "/assets/images/threadfin-butterflyfish.jpg"
+object: "Threadfin Butterflyfish"
+geometry: "Subdivision-ready"
+vertices: "1,422"
+uvunwrapped: "Yes"
+animated: "No"
+software: "Blender 2.79b"
+rigged: "No"
+scalable: "CG Only"
+engine: "Blender Render"
+gameready: "N/A"
+3dprintableready: "N/A"
+admin: "<a href='/about'>Mohamad Rido</a>"
+blend: "<a title='Object' href='' onclick='threadfin_butterflyfish_blend()' >.zip 9.4 MB</a>"
+dae: "<a title='Object' href='' onclick='threadfin_butterflyfish_dae()' >.zip 72.6 kB</a>"
+3ds: "<a title='Object' href='' onclick='threadfin_butterflyfish_3ds()' >.zip 23.0 kB</a>"
+fbx: "<a title='Object' href='' onclick='threadfin_butterflyfish_fbx()' >.zip 29.6 kB</a>"
+obj: "<a title='Object' href='' onclick='threadfin_butterflyfish_obj()' >.zip 56.9 kB</a>"
+stl: "<a title='Object' href='' onclick='threadfin_butterflyfish_stl()' >.zip 62.8 kB</a>"
+glb: "<a title='Object' href='' onclick='threadfin_butterflyfish_glb()' >.zip 8.0 MB</a>"
+gltf: "<a title='Object' href='' onclick='threadfin_butterflyfish_gltf()' >.zip 8.1 MB</a>"
+texture: "<a title='Texture' href='' onclick='threadfin_butterflyfish_texture()' >.zip 16.5 MB</a>"
+hdri: "No"
+imagetexture: ".png, .svg"
+environment: ".hdr"
+notice: "-"
+---
