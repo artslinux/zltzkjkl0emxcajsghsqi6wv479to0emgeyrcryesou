@@ -29,5 +29,5 @@ texture: "<a title='Texture' href='' onclick='threadfin_butterflyfish_texture()'
 hdri: "No"
 imagetexture: ".png, .svg"
 environment: ".hdr"
-notice: "-"
+notice: "Coming soon!"
 ---
