@@ -348,6 +348,16 @@ function copperband_butterflyfish_dae(){window.open('https://cdn.cg3d.org/copper
 function copperband_butterflyfish_stl(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-stl.zip');}
 function copperband_butterflyfish_glb(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-glb.zip');}
 function copperband_butterflyfish_gltf(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-gltf.zip');}
+
+function threadfin_butterflyfish_blend(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish.zip');}
+function threadfin_butterflyfish_fbx(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-fbx.zip');}
+function threadfin_butterflyfish_obj(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-obj.zip');}
+function threadfin_butterflyfish_3ds(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-3ds.zip');}
+function threadfin_butterflyfish_dae(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-dae.zip');}
+function threadfin_butterflyfish_stl(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-stl.zip');}
+function threadfin_butterflyfish_glb(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-glb.zip');}
+function threadfin_butterflyfish_gltf(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-gltf.zip');}
+
 function _blend(){window.open('https://cdn.cg3d.org/.zip');}
 function _fbx(){window.open('https://cdn.cg3d.org/-fbx.zip');}
 function _obj(){window.open('https://cdn.cg3d.org/-obj.zip');}
@@ -830,4 +840,5 @@ function pepsi_can_texture(){window.open('https://cdn.cg3d.org/pepsican.zip');}
 function coca_cola_texture(){window.open('https://cdn.cg3d.org/coca-cola-texture-4k.zip');}
 function red_bull_texture(){window.open('https://cdn.cg3d.org/red-bull-texture-4k.zip');}
 function copperband_butterflyfish_texture(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-texture.zip');}
+function threadfin_butterflyfish_texture(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-texture.zip');}
 function _texture(){window.open('https://cdn.cg3d.org/.zip');}
