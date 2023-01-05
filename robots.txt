@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /404
+Allow: /
+
+# set crawl delay for bing bot, otherwise he will crawl use 10000 times a day
+User-agent: bingbot
+crawl-delay: 10
+
+User-agent: Mediapartners-Google
+Disallow: 
+
+Sitemap: https://cg3d.org/sitemap.xml
