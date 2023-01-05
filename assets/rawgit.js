@@ -348,7 +348,6 @@ function copperband_butterflyfish_dae(){window.open('https://cdn.cg3d.org/copper
 function copperband_butterflyfish_stl(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-stl.zip');}
 function copperband_butterflyfish_glb(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-glb.zip');}
 function copperband_butterflyfish_gltf(){window.open('https://cdn.cg3d.org/copperband-butterflyfish-gltf.zip');}
-
 function threadfin_butterflyfish_blend(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish.zip');}
 function threadfin_butterflyfish_fbx(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-fbx.zip');}
 function threadfin_butterflyfish_obj(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-obj.zip');}
@@ -357,7 +356,6 @@ function threadfin_butterflyfish_dae(){window.open('https://cdn.cg3d.org/threadf
 function threadfin_butterflyfish_stl(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-stl.zip');}
 function threadfin_butterflyfish_glb(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-glb.zip');}
 function threadfin_butterflyfish_gltf(){window.open('https://cdn.cg3d.org/threadfin-butterflyfish-gltf.zip');}
-
 function _blend(){window.open('https://cdn.cg3d.org/.zip');}
 function _fbx(){window.open('https://cdn.cg3d.org/-fbx.zip');}
 function _obj(){window.open('https://cdn.cg3d.org/-obj.zip');}
