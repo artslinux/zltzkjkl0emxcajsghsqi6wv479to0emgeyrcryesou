@@ -27,6 +27,24 @@ title: Tags
 
 <br/>
 
+// Categories same as Tags layout! //
+<h2>Categories</h2>
+<div id="cloud" style="text-align:center;">
+{% assign categories = site.categories %}
+  {% if categories.first[0] == null %}
+    {% for category in categories %}
+      <a href="#{{ category }}">{{ category | capitalize }} ({{ site.tags[category].size }})</a>
+    {% endfor %}
+  {% else %}
+    {% for category in categories %}
+      <a href="{{ category[0] }}">{{ category[0] | capitalize }} ({{ category[1].size }})</a>
+    {% endfor %}
+  {% endif %}
+{% assign categories = nil %}
+</div>
+
+<br/>
+
 <h2>Tags</h2>
 <ol>
 {% assign categories_list = site.tags %}
