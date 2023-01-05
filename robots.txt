@@ -2,6 +2,9 @@ User-agent: *
 Disallow: /404
 Allow: /
 
+User-agent: Googlebot
+Disallow: 
+
 # set crawl delay for bing bot, otherwise he will crawl use 10000 times a day
 User-agent: bingbot
 crawl-delay: 10
