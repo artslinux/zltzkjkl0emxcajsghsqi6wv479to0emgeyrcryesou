@@ -10,6 +10,7 @@ title: Tags
     <a href="/gallery" class="bar-item button">Gallery</a>
   </div>
 <br/>
+<div id="cloud" style="text-align:center;">
 <h2>Categories</h2>
 {% assign categories = site.categories %}
   {% if categories.first[0] == null %}
@@ -22,6 +23,7 @@ title: Tags
     {% endfor %}
   {% endif %}
 {% assign categories = nil %}
+</div>
 <br/>
 <h2>Tags</h2>
 <ol>
