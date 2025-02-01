@@ -96,15 +96,49 @@
                 const deviceInfo = parser.getDevice();
                 const osInfo = parser.getOS();
 
+                // Deteksi jenis perangkat yang lebih akurat
+                let deviceType = 'Unknown Device';
+                const userAgent = navigator.userAgent;
+
+                // Daftar tipe perangkat berdasarkan informasi parser dan user agent
+                const deviceTypes = {
+                    'mobile': 'Smartphone',
+                    'tablet': 'Tablet',
+                    'smarttv': 'Smart TV',
+                    'console': 'Game Console',
+                    'embedded': 'Embedded Device',
+                    'wearable': 'Wearable'
+                };
+
+                // Cek tipe perangkat dari UAParser
+                if (deviceInfo.type && deviceTypes[deviceInfo.type]) {
+                    deviceType = deviceTypes[deviceInfo.type];
+                }
+                // Deteksi laptop/desktop berdasarkan OS dan user agent
+                else if (osInfo.name && ['Windows', 'Mac OS', 'Linux'].includes(osInfo.name)) {
+                    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobile))/i.test(userAgent)) {
+                        deviceType = 'Tablet';
+                    } else if (/Mobile|iPhone|Android|iPod|iPad/.test(userAgent)) {
+                        deviceType = 'Smartphone';
+                    } else {
+                        // Deteksi apakah desktop atau laptop
+                        deviceType = userAgent.match(/X11|Linux x86_64/) ? 'Desktop' : 'Laptop';
+                    }
+                }
+                // Deteksi virtual machine
+                else if (/VirtualBox|VMware|QEMU|KVM/.test(userAgent)) {
+                    deviceType = 'Virtual Machine';
+                }
+
                 document.getElementById('browser').textContent = `${browserInfo.name} ${browserInfo.version}`;
-                document.getElementById('device').textContent = `${deviceInfo.vendor || ''} ${deviceInfo.model || 'Unknown Device'}`;
+                document.getElementById('device').textContent = deviceType;
                 document.getElementById('os').textContent = `${osInfo.name} ${osInfo.version}`;
 
                 // Inisialisasi peta dengan menonaktifkan atribusi default
                 const map = L.map('map', {
                     attributionControl: false // Menonaktifkan teks atribusi
                 }).setView([data.latitude, data.longitude], 13);
-                
+
                 // Menambahkan tile layer tanpa teks atribusi
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: '' // Teks atribusi dikosongkan
