@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IP Geolocation</title>
-    <!-- Leaflet CSS untuk peta -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <!-- UAParser.js untuk deteksi browser, perangkat, dan OS -->
     <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@1.0.2/src/ua-parser.min.js"></script>
     <style>
         * {
@@ -47,6 +45,7 @@
             padding: 10px;
             background: #f8f9fa;
             border-radius: 5px;
+            font-size: 14px;
         }
 
         @media (max-width: 768px) {
@@ -64,43 +63,64 @@
             <div class="info-item">City: <span id="city"></span></div>
             <div class="info-item">Region: <span id="region"></span></div>
             <div class="info-item">Country: <span id="country"></span></div>
+            <div class="info-item">Postal Code: <span id="postal"></span></div>
             <div class="info-item">Timezone: <span id="timezone"></span></div>
+            <div class="info-item">Local Time: <span id="local-time"></span></div>
             <div class="info-item">ISP: <span id="isp"></span></div>
+            <div class="info-item">Coordinates: <span id="coordinates"></span></div>
+            
+            <h3 style="margin-top: 20px;">Device Info</h3>
             <div class="info-item">Browser: <span id="browser"></span></div>
             <div class="info-item">Device: <span id="device"></span></div>
             <div class="info-item">OS: <span id="os"></span></div>
+            <div class="info-item">Screen Resolution: <span id="screen-resolution"></span></div>
+            <div class="info-item">CPU Cores: <span id="cpu"></span></div>
+            <div class="info-item">Language: <span id="language"></span></div>
+            
+            <h3 style="margin-top: 20px;">Network Info</h3>
+            <div class="info-item">Connection Type: <span id="connection-type"></span></div>
+            <div class="info-item">Secure Connection: <span id="secure-connection"></span></div>
+            <div class="info-item">Cookies Enabled: <span id="cookies-enabled"></span></div>
+            <div class="info-item">Local IP: <span id="local-ip"></span></div>
+            
+            <h3 style="margin-top: 20px;">Browser Capabilities</h3>
+            <div class="info-item">Touch Support: <span id="touch-support"></span></div>
+            <div class="info-item">WebGL Support: <span id="webgl-support"></span></div>
+            <div class="info-item">Plugins: <span id="plugins"></span></div>
         </div>
         <div id="map"></div>
     </div>
 
-    <!-- Leaflet JS untuk peta -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
         async function getIPInfo() {
             try {
-                // Mendapatkan informasi IP dan lokasi
+                // Get IP information
                 const response = await fetch('https://ipapi.co/json/');
                 const data = await response.json();
 
-                // Update informasi IP
+                // Update basic info
                 document.getElementById('ip').textContent = data.ip;
                 document.getElementById('city').textContent = data.city;
                 document.getElementById('region').textContent = data.region;
                 document.getElementById('country').textContent = `${data.country_name} (${data.country_code})`;
+                document.getElementById('postal').textContent = data.postal;
                 document.getElementById('timezone').textContent = data.timezone;
                 document.getElementById('isp').textContent = data.org;
+                document.getElementById('coordinates').textContent = `${data.latitude}, ${data.longitude}`;
+                
+                // Local time
+                const localTime = new Date().toLocaleTimeString('en-US', { timeZone: data.timezone });
+                document.getElementById('local-time').textContent = localTime;
 
-                // Mendapatkan informasi browser, perangkat, dan OS
+                // Device info
                 const parser = new UAParser();
                 const browserInfo = parser.getBrowser();
                 const deviceInfo = parser.getDevice();
                 const osInfo = parser.getOS();
 
-                // Deteksi jenis perangkat yang lebih akurat
-                let deviceType = 'Unknown Device';
+                let deviceType = 'Unknown';
                 const userAgent = navigator.userAgent;
-
-                // Daftar tipe perangkat berdasarkan informasi parser dan user agent
                 const deviceTypes = {
                     'mobile': 'Smartphone',
                     'tablet': 'Tablet',
@@ -110,53 +130,70 @@
                     'wearable': 'Wearable'
                 };
 
-                // Cek tipe perangkat dari UAParser
                 if (deviceInfo.type && deviceTypes[deviceInfo.type]) {
                     deviceType = deviceTypes[deviceInfo.type];
-                }
-                // Deteksi laptop/desktop berdasarkan OS dan user agent
-                else if (osInfo.name && ['Windows', 'Mac OS', 'Linux'].includes(osInfo.name)) {
-                    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobile))/i.test(userAgent)) {
-                        deviceType = 'Tablet';
-                    } else if (/Mobile|iPhone|Android|iPod|iPad/.test(userAgent)) {
-                        deviceType = 'Smartphone';
-                    } else {
-                        // Deteksi apakah desktop atau laptop
-                        deviceType = userAgent.match(/X11|Linux x86_64/) ? 'Desktop' : 'Laptop';
-                    }
-                }
-                // Deteksi virtual machine
-                else if (/VirtualBox|VMware|QEMU|KVM/.test(userAgent)) {
-                    deviceType = 'Virtual Machine';
+                } else if (osInfo.name && ['Windows', 'Mac OS', 'Linux'].includes(osInfo.name)) {
+                    deviceType = /Mobile|iPhone|Android|iPod|iPad/.test(userAgent) ? 'Smartphone' : 'Desktop/Laptop';
                 }
 
                 document.getElementById('browser').textContent = `${browserInfo.name} ${browserInfo.version}`;
                 document.getElementById('device').textContent = deviceType;
                 document.getElementById('os').textContent = `${osInfo.name} ${osInfo.version}`;
+                document.getElementById('screen-resolution').textContent = `${window.screen.width}x${window.screen.height}`;
+                document.getElementById('cpu').textContent = navigator.hardwareConcurrency ? `${navigator.hardwareConcurrency} cores` : 'Unknown';
+                document.getElementById('language').textContent = navigator.language || 'Unknown';
 
-                // Inisialisasi peta dengan menonaktifkan atribusi default
-                const map = L.map('map', {
-                    attributionControl: false // Menonaktifkan teks atribusi
-                }).setView([data.latitude, data.longitude], 13);
+                // Network info
+                document.getElementById('connection-type').textContent = navigator.connection?.effectiveType || 'Unknown';
+                document.getElementById('secure-connection').textContent = window.location.protocol === 'https:' ? 'Yes' : 'No';
+                document.getElementById('cookies-enabled').textContent = navigator.cookieEnabled ? 'Yes' : 'No';
 
-                // Menambahkan tile layer tanpa teks atribusi
+                // Local IP detection
+                try {
+                    const peerConnection = new RTCPeerConnection({ iceServers: [] });
+                    peerConnection.createDataChannel('');
+                    peerConnection.createOffer().then(offer => peerConnection.setLocalDescription(offer));
+                    peerConnection.onicecandidate = event => {
+                        if (event.candidate) {
+                            const ip = event.candidate.candidate.split(' ')[4];
+                            document.getElementById('local-ip').textContent = ip;
+                            peerConnection.close();
+                        }
+                    };
+                } catch (error) {
+                    document.getElementById('local-ip').textContent = 'Unavailable';
+                }
+
+                // Browser capabilities
+                document.getElementById('touch-support').textContent = 'ontouchstart' in window ? 'Yes' : 'No';
+                
+                const canvas = document.createElement('canvas');
+                document.getElementById('webgl-support').textContent = 
+                    !!canvas.getContext('webgl') || !!canvas.getContext('experimental-webgl') ? 'Yes' : 'No';
+
+                const plugins = navigator.plugins ? 
+                    Array.from(navigator.plugins).map(p => p.name).join(', ') : 'Not detectable';
+                document.getElementById('plugins').textContent = plugins;
+
+                // Initialize map
+                const map = L.map('map', { attributionControl: false })
+                    .setView([data.latitude, data.longitude], 13);
+
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: '' // Teks atribusi dikosongkan
+                    attribution: ''
                 }).addTo(map);
 
-                // Menambahkan marker
                 L.marker([data.latitude, data.longitude])
                     .addTo(map)
-                    .bindPopup(`Lokasi IP: ${data.ip}`)
+                    .bindPopup(`IP Location: ${data.ip}`)
                     .openPopup();
 
             } catch (error) {
                 console.error('Error:', error);
-                alert('Gagal mendapatkan informasi lokasi!');
+                alert('Failed to get location information!');
             }
         }
 
-        // Jalankan fungsi saat halaman dimuat
         window.onload = getIPInfo;
     </script>
 </body>
