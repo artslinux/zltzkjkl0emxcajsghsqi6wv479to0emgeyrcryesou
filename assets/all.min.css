@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5,h6{font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
   height: 100vh;
 }
 .parallax .bg__foo {background-image: url(https://cg3d.org/assets/baloon-cloud.jpg);}
-.parallax .bg__bar {background-image: url(https://mohamadrido.com/assets/images/instruments-wireframe.jpg);}
+.parallax .bg__bar {background-image: url(https://cg3d.org/assets/instruments-wireframe.jpg);}
 .parallax .bg__baz {background-image: url(https://cg3d.org/assets/baloon-solid.jpg);}
 .parallax .bg__bazz {background-image: url(https://cg3d.org/assets/baloon-cloud.jpg);}
 .parallax .bg__break {box-shadow: inset 0 0 0.2em #111; background-image: url(https://cg3d.org/assets/baloon-cloud.jpg);}
@@ -141,7 +141,7 @@ article section {
 article section.main {
   background-position:center;
   background-size:cover;
-  background-image:url("https://mohamadrido.com/assets/images/instruments.jpg");
+  background-image:url("https://cg3d.org/assets/instruments.jpg");
   min-height:100%;
 }
 article section.parallax {
